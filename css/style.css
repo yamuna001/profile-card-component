@@ -1,0 +1,138 @@
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+body, h1, h2, h3, h4, p, figure, blockquote, dl, dd, ul {
+  margin: 0;
+}
+html {
+    scroll-behavior: smooth;
+  }
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+:root {
+
+    --bg: #19a1ad;
+
+    --colorparagraph: hsl(0, 0%, 59%);
+    --colorparagraph2: hsl(229, 23%, 23%);
+    --accent:hsl(277, 64%, 61%);
+    --ffparagraph: 'Kumbh Sans', sans-serif;
+    --fsparagraph: 1.125rem;
+}
+body {
+    padding:0em;
+    font-family: var(--ffparagraph);
+    text-rendering: optimizeSpeed;
+    text-align:left; 
+    background: var(--bg);
+    min-height: 100vh; 
+    display:flex; flex-direction:column; 
+}
+h1, h2, h3, ul {
+    padding:0;
+}
+.bg-top {
+  position:absolute;
+  top:0;
+  left:0;
+  width:52%;
+  height:52%;
+  z-index: -1;
+  background: url("../images/bg-pattern-top.svg") no-repeat right bottom; 
+}
+.bg-bottom {
+  position:absolute;
+  bottom:0;
+  right:0;
+  width:52%;
+  height:52%;
+  z-index: -1;
+  background: url("../images/bg-pattern-bottom.svg") no-repeat left top; 
+}
+main {
+    overflow:hidden;
+    display:grid;
+    align-items: center;
+    gap: 0rem;
+    max-width: 20.5rem;
+    padding: 5.375rem 0 1.625rem 0;
+    margin:auto;
+    background-image: url("../images/bg-pattern-card.svg");
+    background-position:0% 0%;
+    background-repeat:no-repeat;
+    background-color:white;
+    border-radius: 1rem;
+    text-align: center;
+    box-shadow:0 0rem 2rem 0.1rem #1c91a2;
+}
+.profile-img {
+  border-radius:50%;
+  border:0.313rem solid white;
+  overflow:hidden;
+  max-width:6.625rem;
+  margin:auto;
+}
+.profile-img img {
+  width:100%;
+  vertical-align: top; 
+}
+h1 {
+  font-size:1.1rem;
+  line-height:2.6rem;
+  color: var(--colorparagraph2);
+  font-weight:700;
+  letter-spacing: 0.02rem;
+  margin-top:0.6rem;
+}
+h1 span{
+  color: var(--colorparagraph);
+  font-weight:400;
+}
+h2 {
+  font-size:0.9rem;
+  font-weight:400;
+  color: var(--colorparagraph);
+}
+.stats {
+  display:grid;
+  grid-template-columns:1fr 1fr 1fr;
+  gap:3rem;
+  margin-top:1.5rem;
+  padding:1.5rem 2.875rem 0 2.875rem;
+  border-top: 1px solid #e7e7e7;
+}
+h3 {
+  font-size:1.1rem;
+  font-weight:700;
+  color: var(--colorparagraph2);
+  margin-bottom:0.3rem;
+}
+p {
+  color: var(--colorparagraph);
+  font-size: var(--fsparagraph);
+  font-weight:400;
+}
+.stats p {
+  font-size:0.6rem;
+  letter-spacing: 0.09rem;
+}
+footer { font-size: 11px; text-align: center; }
+footer a { color: hsl(240, 18%, 3%); }
+
+@media screen and (min-width:40rem) {
+  body {
+    padding:0 1rem;
+  }
+  main {
+    max-width:21.875rem;
+  }
+
+}
